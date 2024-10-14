@@ -2,9 +2,9 @@ const production = 'production'
 const local = 'dev'
 
 const local_api_url = 'http://localhost:5000'
-const production_api_url = 'http://localhost:5000'
+const production_api_url = 'https://news-backend-mu.vercel.app'
 
-const mode = local
+const mode = production
 
 let base_api_url = ''
 
