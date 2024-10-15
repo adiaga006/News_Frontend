@@ -41,7 +41,7 @@ const SearchNews = () => {
                     <SimpleDetailsNewCard key={i} news={item} type="details-news" height={200} />
                 ))
             ) : (
-                !loading && !error && <p>No results found for "{value}"</p>
+                !loading && !error && <p>No results found for {value}</p>
             )}
         </div>
     )
