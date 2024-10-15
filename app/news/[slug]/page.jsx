@@ -7,7 +7,7 @@ import PopularNews from "@/components/news/PopularNews";
 import NewsCard from "@/components/news/items/NewsCard";
 import SimpleDetailsNewCard from "@/components/news/items/SimpleDetailsNewCard";
 import React from "react";
-import htmlParser from 'react-html-parser'
+import htmlParser from 'html-react-parser'
 import { base_api_url } from '../../../config/config'
 import RelatedNews from "@/components/news/RelatedNews";
 import RecentNews from "@/components/news/RecentNews";
