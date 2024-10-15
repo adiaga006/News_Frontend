@@ -10,21 +10,28 @@ const RecentNews = () => {
 
   useEffect(() => {
     const fetchRecentNews = async () => {
-      try {
-        const res = await fetch(`${base_api_url}/api/recent/news`, {
-          next: {
-            revalidate: 1,
-          },
-        });
-        const data = await res.json();
-        setNews(data.news);
-      } catch (error) {
-        console.error('Failed to fetch recent news', error);
+      const cachedNews = sessionStorage.getItem('recent_news'); // Get cached news from session storage
+
+      if (cachedNews) {
+        setNews(JSON.parse(cachedNews)); // Parse and set cached news if available
+      } else {
+        try {
+          const res = await fetch(`${base_api_url}/api/recent/news`, {
+            next: {
+              revalidate: 1,
+            },
+          });
+          const data = await res.json();
+          setNews(data.news);
+          sessionStorage.setItem('recent_news', JSON.stringify(data.news)); // Cache the news in session storage
+        } catch (error) {
+          console.error('Failed to fetch recent news', error);
+        }
       }
     };
 
     fetchRecentNews();
-  }, []); // Empty dependency array means this effect runs once on component mount
+  }, []); // Run once on component mount
 
   return (
     <div className="w-full flex flex-col gap-y-[14px] bg-white pt-4">
