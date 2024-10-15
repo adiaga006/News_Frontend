@@ -24,7 +24,7 @@ const Footer = () => {
               />
               <h2 className="text-slate-300">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
+                industry. Lorem Ipsum has been the industry&apos;s standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
                 of type and scrambled it to make a type specimen book.
               </h2>
@@ -47,8 +47,9 @@ const Footer = () => {
       <div className="bg-[#262323]">
         <div className="px-4 md:px-8 py-5 flex flex-col md:flex-row gap-3 justify-between items-center">
           <div className="flex gap-y-2 text-gray-400 justify-start items-center">
-            <span>Copyright © 2023</span>
-            <Link href={"#"}>Learn with Project</Link>
+          <span>Copyright © 2024 </span>
+          <span>&nbsp;</span>
+          <Link href={"https://github.com/adiaga006"}>Nguyen Dinh Duy</Link>          
           </div>
           <div className="flex gap-x-[4px]">
             <a

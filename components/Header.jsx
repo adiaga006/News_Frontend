@@ -31,7 +31,7 @@ const Header = () => {
                         </div>
                         <div className='md:w-8/12 w-full hidden md:block'>
                             <div className='w-full flex justify-end'>
-                                <Image src={adver_image} />
+                                <Image src={adver_image}  alt="images" />
                             </div>
                         </div>
 
